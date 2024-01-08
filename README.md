@@ -1,5 +1,7 @@
 # Basketball Scoreboard App
 
+https://basketboard.netlify.app/
+
 ## Overview of the project:
 
 This project is a web-based basketball scorekeeping application with a user interface that includes a basketball court background image, timer, team scores, and fouls. 
