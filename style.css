@@ -1,0 +1,251 @@
+/* DEFAULT STYLING */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h1, h2, h3{
+    color: white;
+}
+
+h3 {
+    margin: 0.8em 1em 1em 1em;
+}
+
+/* BACKGROUND IMAGE */
+main img{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* BASKET CONTENT */
+
+.basket-container {
+    background: #1B244A;
+    width: 50%;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    border-radius: 12px;
+    box-shadow: 0 0 11px 2px rgba(48, 48, 48, 0.75);
+}
+
+.teams-container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2.5em;
+}
+
+/* CONTENT FOR BOTH THE HOME AND GUEST TEAMS */
+
+.home-container, .guest-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* BUTTONS FOR THE INCREMENT SCORES & FOULS */
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+.btns button, #home-fouls-btn, #guest-fouls-btn{
+    padding: .8em;
+    background: transparent;
+    border: 1px solid #9AABD8;
+    color: white;
+    border-radius: 6px;
+    margin-left: .8em;
+}
+
+.btns button:hover, .timer-container button:hover, #home-fouls-btn:hover, #guest-fouls-btn:hover {
+    background: #9AABD8;
+    color: white;
+    cursor: pointer;
+}
+
+#arrow-left, #arrow-right{
+    display: none;
+    color: red;
+    font-size: 1.5rem;
+}
+
+#home-fouls-value, #guest-fouls-value, #timer-value, #score-home, #score-guest{
+    background: #0a0001;
+    color: #F94F6D;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.poss-container{
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 38%;
+}
+
+.poss-value{
+    background: #0a0001;
+    padding: 1em;
+    border-radius: 8px;
+    text-align: center;
+    width: 50px; 
+}
+
+#score-home, #score-guest{
+    font-size: 3.5rem;
+    width: 75%;
+}
+
+.home-fouls, .guest-fouls{
+    margin-top: 2em;
+}
+
+#home-fouls-value, #guest-fouls-value{
+    display: block;
+    font-size: 1.5rem;
+    margin: .2em 0 .5em 0;
+}
+
+#home-fouls-btn, #guest-fouls-btn{
+    display: inline-block;
+    margin: 0 2em;
+}
+
+.timer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timer-value{
+    width: 150px;
+    font-size: 2rem;
+}
+
+.timer-container button{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    padding: .5em;
+    background: transparent;
+    border: 1px solid #9AABD8;
+    color: white;
+    border-radius: 6px;
+}
+
+
+/* STLING FOR THE MODAL */
+
+.modal-container{
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 2%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.modal-elements{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 2em;
+    background-color: #2e429b;
+    text-align: center;
+    
+}
+
+.modal-elements button{
+    width: 40%;
+    align-self: center;
+    margin-top: 2em;
+    font-size: 1.2rem;
+    padding: .4em;
+    border: 1px solid #9AABD8;
+}
+
+.modal-elements button:hover{
+    cursor: pointer;
+    background-color: #2e429b;
+    color: white;
+}
+
+/* STYLING FOR THE MOBILE LAYOUT */
+
+@media (max-width: 426px) {
+    
+    h1, #start-game, #timer-value, #score-home, #score-guest, #home-fouls-value, #guest-fouls-value{
+        font-size: 1.2rem;
+    }
+
+    #start-game{
+        margin-top: .8em;
+    }
+
+    h2, h3{
+        font-size: 1rem;
+    }
+
+    .btns button, #home-fouls-btn, #guest-fouls-btn{
+        font-size: .6rem;
+    }
+
+    .poss-container{
+        left: 32%;
+        top: 55%;
+    }
+
+    .home-fouls, .guest-fouls{
+        margin-top: 4em;
+    }
+
+    .poss-value{
+        width: 10%;
+        height: 0;
+        align-self: center;
+    }
+
+    .basket-container{
+        width: 90%;
+        left: 5%;
+        top: 25%;
+    }
+
+    .teams-container{
+        justify-content: space-between;
+        padding: 0 1em;
+        margin-top: 1em;
+    }
+
+    #arrow-left, #arrow-right{
+        position: absolute;
+        top: 25%;
+    }
+
+    #arrow-left{
+        left: 5%;
+    }
+
+    #arrow-right{
+        right: 5%;
+    }
+}
